@@ -26,4 +26,4 @@ from pyperclip import copy
 # submit(ans, part="b", day={day}, year={year})
 """)
 
-    open(f"./{prefix}_sample.in", "w")
+    open(f"./{prefix}.in", "w")
