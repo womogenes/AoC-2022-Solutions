@@ -14,6 +14,8 @@ if not prefix in os.listdir():
         fout.write(f"""# from aocd import submit
 from pyperclip import copy
 
+with open("./day_{prefix}.in") as fin:
+    lines = fin.read().strip().split()
 
 # submit(ans, part="a", day={day}, year={year})
 """)
