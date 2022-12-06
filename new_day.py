@@ -11,21 +11,10 @@ if not prefix in os.listdir():
     os.mkdir(prefix)
     os.chdir(prefix)
     with open(f"./{prefix}_p1.py", "w") as fout:
-        fout.write(f"""# from aocd import submit
-from pyperclip import copy
-
-with open("./day_{prefix}.in") as fin:
+        fout.write(f"""with open("./{prefix}.in") as fin:
     lines = fin.read().strip().split()
-
-# submit(ans, part="a", day={day}, year={year})
 """)
 
-    with open(f"./{prefix}_p2.py", "w") as fout:
-        fout.write(f"""# from aocd import submit
-from pyperclip import copy
-
-
-# submit(ans, part="b", day={day}, year={year})
-""")
+    open(f"./{prefix}_p2.py", "w")
 
     open(f"./{prefix}.in", "w")
