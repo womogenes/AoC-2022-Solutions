@@ -1,2 +1,4 @@
 *.in
 .vscode/
+*.exe
+*.out
