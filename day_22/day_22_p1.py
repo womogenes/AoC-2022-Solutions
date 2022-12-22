@@ -55,11 +55,7 @@ direction = 0
 row = 0
 col = bound_row[0][0]
 
-visited = {}
-
 for cmd in commands:
-    visited[(row, col)] = ">V<^"[direction]
-
     if isinstance(cmd, str):
         if cmd == "L":
             direction = (direction - 1) % 4
@@ -72,7 +68,6 @@ for cmd in commands:
     drow, dcol = dirs[direction]
 
     for _ in range(cmd):
-        visited[(row, col)] = ">V<^"[direction]
         if (row, col) not in adj:
             break
 
